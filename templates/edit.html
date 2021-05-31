@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock title %}
+{% block body %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('  {{url_for('static', filename='assets/img/about.jpg') }}  ')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Admin panel</h1>
+                            <span class="subheading">Manage  your posts and change them</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <h1>Basic Action</h1>
+                    <a href="/login"><button class="btn btn-primary text-uppercase">Back To Dashboard</button></a>
+                    <a href="/logout"><button class="btn btn-primary text-uppercase">Logout</button></a>
+                    <hr>
+                    <form action="/edit/{{post.sno}}" method="POST">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputTitle" type="text" name="title" value="{{post.title}}" placeholder="Enter your name..." />
+                                    <label for="inputTitle">Title</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputsubtitle" type="text" name="subtitle" value="{{post.subtitle}}" placeholder="Enter your email..." />
+                                    <label for="inputsubtitle">Subtitle</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputslug" type="text" name="slug" value="{{post.slug}}" placeholder="Enter your phone number..." />
+                                    <label for="inputslug">Slug</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="inputMessage" name="content" value="{{post.content}}" placeholder="Enter your message here..." style="height: 12rem">{{post.content}}</textarea>
+                                    <label for="inputMessage">Content</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputfile" type="text" name="img_file" value="{{post.img_file}}" placeholder="Enter your phone number..." />
+                                    <label for="inputslug">Img_filename</label>
+                                </div>
+
+                                <br />
+                                <button class="btn btn-primary text-uppercase" type="submit">Submit</button>
+                            </form>
+                            <br />
+
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+{% endblock body %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %} login {% endblock title %}
+{% block body %}
+
+    <style>
+      .text{
+        padding-top: 88px;
+        padding-left: 406px;
+        padding-right: 406px;
+      }
+
+      .form-control
+      {
+         border-radius: 15px;
+      }
+      .btn
+      {
+         border-radius: 15px;
+      }
+    </style>
+
+<header class="masthe" style="background-image: url('  {{url_for('static', filename='assets/img/post2.jpg') }}  ')">
+<div class="text-center padded">
+<main class="text form-signin">
+  <form action="/login" method="post">
+    <h1>{{params['blog_name']}}</h1>
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating" my-5>
+      <input type="text" class="form-control" id="uname" name="uname" placeholder="Username">
+      <label for="uname">Username</label>
+    </div>
+    <div class="form-floating my-2">
+      <input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
+      <label for="pass">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2019–2021</p>
+  </form>
+</main>
+</div>
+{% endblock body %}

@@ -1,0 +1,21 @@
+{
+  "params":
+  {
+    "local_server":"true",
+    "local_uri":"mysql://root:@localhost/wondershappen",
+    "prod_uri": "mysql://root:@localhost/wondershappen",
+    "blog_name": "WONDERS_HAPPEN",
+    "tag": "Bhagwat Gita\uD83D\uDD49 ",
+    "tag_line": "Make life wonder \uD83D\uDC99 | Make things positive \uD83E\uDD1E\uD83C\uDFFB",
+    "gmail_user": "",
+    "gmail_pass": "",
+    "inst_uri": "https://www.instagram.com/_wonders_happen_/",
+    "lin_uri": "https://www.linkedin.com/in/vinodgawde/",
+    "github_uri": "https://github.com/vinodgawde",
+    "about_me": "My name is VINOD GAWDE. My profession is Python Full Stack Developer ",
+    "no_of_post": 2,
+    "pro_img": "abc.jpeg",
+    "admin_user": "Vinod",
+    "admin_pass": "Vinod12345"
+  }
+}

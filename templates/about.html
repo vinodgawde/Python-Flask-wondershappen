@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block title %} About {% endblock title %}
+{% block body %}
+<style>
+    
+    #mainNav.is-fixed 
+    {
+    position: absolute;
+    }
+
+    #column {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  #card {
+    box-shadow: 0 60px 20px 0 rgba(29, 28, 28, 0.6);
+    margin: 8px;
+    border-radius: 25px;
+    padding: 68px;
+  }
+  
+  #card img{
+      height: 200px;
+      border-radius: 15px;
+  }
+  .container {
+    padding: 21px 32px;
+    font-family: 'Baloo Bhai 2', cursive;
+  }
+  
+
+  #social1 img{
+    height: 45px;
+    }
+
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+
+  .abt{
+    color: white;
+    padding-top: 20px;
+  }
+</style>
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url(' {{url_for('static', filename='assets/img/about-bg.jpg') }}  ')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            <h1>About Me</h1>
+                        </div>
+                        <div class="abt">
+            <h2 style="text-align:center"></h2>
+            <div id="column">
+                <div id="card">
+                    {% set fname = 'assets/img/' + params['pro_img'] %}
+                    <img src="{{url_for('static', filename=fname) }}" alt="Vinod Gawde">
+                    <div class="container">
+                        <h2>Vinod Gawde</h2>
+                        <p>Python Full Stack Developer</p>
+                        <p>9930752192</p>
+                        <p>7796gawde@gmail.com</p>
+                        <div id="social">
+                            <a href="{{params['github_uri']}}" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            <a href="{{params['lin_uri']}} " target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                    </div>
+                    <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    </div>
+    </div>
+</header>
+        <!-- Footer-->
+{% endblock body %}
